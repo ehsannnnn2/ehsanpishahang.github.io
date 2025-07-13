@@ -21,7 +21,7 @@ html {
     align-items: center;
 }
 
-/* خطوط تزئینی پس‌زمینه */
+/* back ground lines */
 .hero::before {
     content: "";
     position: absolute;
@@ -38,7 +38,6 @@ html {
     position: flex;
     top: 500px;
     right: 265px;
-    /* اگر RTL هستی منو رو سمت راست نشون می‌دیم */
     z-index: 2;
 }
 
@@ -123,7 +122,6 @@ html {
     width: 100%;
     height: 100%;
     pointer-events: none;
-    /* کاربر نتونه باهاش تعامل کنه */
     z-index: 1;
 }
 
@@ -172,7 +170,6 @@ html {
     right: 100px;
     perspective: 1000px;
     z-index: 999;
-    /* مطمئن شو روی همه‌چیز بمونه */
 }
 
 .door {
@@ -190,7 +187,7 @@ html {
     opacity: 50%;
 }
 
-/* انیمیشن پرش و چرخش */
+/* jump and turn */
 .door-container:hover .door {
     animation: jumpAndSpin 0.5s ease forwards,
         toWireframe 0.3s ease 0.5s forwards;
@@ -210,7 +207,7 @@ html {
     }
 }
 
-/* تغییر استایل به حالت معماری بعد از پرش */
+/* changing to wire frame */
 @keyframes toWireframe {
     0% {
         background: #8B0000;
@@ -224,7 +221,6 @@ html {
         border: 2px dashed #545555;
         box-shadow: 0 0 15px rgba(69, 70, 70, 0.5);
         border-radius: 0 100% 0 0;
-        /* فقط بالا راست هلالی میشه */
     }
 }
 
@@ -235,7 +231,6 @@ html {
   animation-delay: 1s;
 }
 
-/* اگر می‌خوای از animation استفاده کنی */
 @keyframes fadeIn {
   to {
     opacity: 1;
@@ -251,12 +246,12 @@ html {
   height: auto;
 }
 
-/* افکت هاور → رنگی شدن */
+/* hover effect */
 .hover-color-image:hover {
   filter: grayscale(0%);
 }
 
-/* انیمیشن فیدین (ظاهر شدن) */
+/* fade in*/
 @keyframes fadeIn {
   to {
     opacity: 1;
